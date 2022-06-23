@@ -31,27 +31,27 @@ const Teaser = styled.article`
 `;
 
 const Title = styled.h2`
-	padding: 2vw;
 	margin: 1vw 0;
-	color: #c9d1d9;
+	padding: 2vw;
 	border-bottom: 1px solid #30363d;
+	color: #c9d1d9;
 `;
 
 const Author = styled.p`
-	background: #30363d;
-	border-radius: 4px;
-	border: 1px solid #747d85;
-	padding: 1vw;
 	margin: 5vw;
+	padding: 1vw;
+	border: 1px solid #747d85;
+	border-radius: 4px;
+	background: #30363d;
 	color: #c9d1d9;
 `;
 
 const Published = styled.p`
-	background: #30363d;
-	border-radius: 4px;
-	border: 1px solid #747d85;
-	padding: 1vw;
 	margin: 5vw;
+	padding: 1vw;
+	border: 1px solid #747d85;
+	border-radius: 4px;
+	background: #30363d;
 	color: #c9d1d9;
 `;
 
@@ -59,16 +59,16 @@ const TeaserText = styled.p`
 	margin: 2vw 7.5vw;
 	color: #c9d1d9;
 	text-align: justify;
-	-webkit-mask-image: linear-gradient(180deg, #000 20%, transparent);
+	mask-image: linear-gradient(180deg, #000 20%, transparent);
 `;
 
 const ReadMore = styled.p`
 	width: 40vw;
 	margin: 4vw auto;
 	padding: 10px 20px;
-	background: #0e5838;
-	border-radius: 24px;
 	border: 1px solid #111218;
+	border-radius: 24px;
+	background: #0e5838;
 	color: #c9d1d9;
 	font-weight: 700;
 	text-align: center;

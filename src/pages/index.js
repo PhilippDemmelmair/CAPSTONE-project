@@ -6,10 +6,10 @@ export default function HomePage() {
 	return (
 		<Layout>
 			<Helmet>
-				<title key="title">My Project</title>
-				<meta key="description" name="description" content="This is my project" />
+				<title key="title">My Blog</title>
+				<meta key="description" name="description" content="This is my blog" />
 			</Helmet>
-			<h1>Home</h1>
+			<h1>This is where the cards will be displayed and something else</h1>
 		</Layout>
 	);
 }

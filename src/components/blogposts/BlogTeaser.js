@@ -66,9 +66,9 @@ const ReadMore = styled.p`
 	width: 40vw;
 	margin: 4vw auto;
 	padding: 10px 20px;
-	background: #0E5838;
+	background: #0e5838;
 	border-radius: 24px;
-	border: 1px: solid #111218;
+	border: 1px solid #111218;
 	color: #c9d1d9;
 	font-weight: 700;
 	text-align: center;

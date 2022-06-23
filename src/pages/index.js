@@ -1,5 +1,6 @@
 import {Helmet} from 'react-helmet';
 
+import BlogTeaser from '../components/blogposts/BlogTeaser';
 import Layout from '../components/Layout';
 
 export default function HomePage() {
@@ -9,7 +10,11 @@ export default function HomePage() {
 				<title key="title">My Blog</title>
 				<meta key="description" name="description" content="This is my blog" />
 			</Helmet>
-			<h1>This is where the cards will be displayed and something else</h1>
+			<BlogTeaser />
+			<BlogTeaser />
+			<BlogTeaser />
+			<BlogTeaser />
+			<BlogTeaser />
 		</Layout>
 	);
 }

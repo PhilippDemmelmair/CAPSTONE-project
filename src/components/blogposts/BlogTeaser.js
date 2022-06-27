@@ -1,9 +1,22 @@
+import {useState} from 'react';
 import styled from 'styled-components';
 
 export default function BlogTeaser() {
+	const [{data, error}, setPosts] = useState({data: '', error: null});
+	function fetchPosts() {
+		fetch('/api/teaser')
+			.then(response => {
+				if (!response.ok) {
+					throw Error(response.statusText);
+				} else {
+					return response.json();
+				}
+			})
+			.then(data => setPosts({data: JSON.stringify(data.data, null, 4), error: null}));
+	}
 	return (
 		<>
-			<Teaser>
+			<Teaser onLoad={fetchPosts()}>
 				<Title>Title ...</Title>
 				<Author>von : author</Author>
 				<Published>veröffentlicht am: published</Published>

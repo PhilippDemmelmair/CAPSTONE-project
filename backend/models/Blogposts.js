@@ -6,7 +6,7 @@ const schema = new Schema(
 	{
 		title: String,
 		author: String,
-		published: {type: Date, default: Date.now},
+		published: {type: Date},
 		views: [],
 		text: String,
 	},
@@ -15,4 +15,4 @@ const schema = new Schema(
 	}
 );
 
-export default model('blogpost', schema, 'blogposts');
+export default mongoose.models.Blogpost || model('Blogpost', schema);

@@ -6,6 +6,11 @@ if (!MONGODB_URI) {
 	throw new Error('MONGODB_URI is undefined');
 }
 
+/**
+ * Global is used here to maintain a cached connection across hot reloads
+ * in development. This prevents connections growing exponentially
+ * during API Route usage.
+ */
 let cached = global.mongoose;
 
 if (!cached) {
@@ -22,15 +27,12 @@ const connectToMongodb = async () => {
 			bufferCommands: false,
 		};
 
-		cached.promise = (await mongoose.connect(MONGODB_URI, opts)).isObjectIdOrHexString(
-			mongoose => {
-				return mongoose;
-			}
-		);
-
-		cached.conn = await cached.promise;
-		return cached.conn;
+		cached.promise = mongoose.connect(MONGODB_URI, opts).then(mongoose => {
+			return mongoose;
+		});
 	}
+	cached.conn = await cached.promise;
+	return cached.conn;
 };
 
 export default connectToMongodb;

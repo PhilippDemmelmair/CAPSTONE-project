@@ -35,6 +35,6 @@ export default function HomePage() {
 			</Layout>
 		);
 	} else if (error) {
-		<h1>Something went wrong, we're onto that!</h1>;
+		<h1>Something went wrong, we are onto that!</h1>;
 	}
 }

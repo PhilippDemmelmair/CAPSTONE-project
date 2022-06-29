@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export default function BlogTeaser({title, author, published, text}) {
+	// TODO add a function to format the date
 	return (
 		<>
 			<Teaser>

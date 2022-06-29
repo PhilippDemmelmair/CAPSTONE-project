@@ -1,5 +1,5 @@
 import connectToMongodb from '../../backend/db/connect';
-import Blogposts from '../../backend/models/blogposts';
+import Blogposts from '../../backend/models/Blogposts';
 
 export default async function handler(request, response) {
 	await connectToMongodb();

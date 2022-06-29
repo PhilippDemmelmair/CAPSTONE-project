@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import {Helmet} from 'react-helmet';
 
 import BlogTeaser from '../components/blogposts/BlogTeaser';
@@ -6,7 +5,7 @@ import Layout from '../components/Layout';
 import useFetch from '../hooks/useFetch';
 
 export default function HomePage() {
-	const {data, error, loading} = useFetch('api/teaser');
+	const {data, error} = useFetch('api/teaser');
 	if (data) {
 		return (
 			<Layout>
@@ -35,5 +34,7 @@ export default function HomePage() {
 				<BlogTeaser /> */}
 			</Layout>
 		);
+	} else if (error) {
+		<h1>Something went wrong, we're onto that!</h1>;
 	}
 }

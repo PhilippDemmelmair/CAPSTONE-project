@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 export default function BlogTeaser({title, author, published, text}) {
-	// const day = Date(published).getDate();
-	// let pub = Date(published);
-	console.log(Date(published));
 	return (
 		<>
 			<Teaser>

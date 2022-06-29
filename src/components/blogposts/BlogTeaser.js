@@ -1,22 +1,16 @@
 import styled from 'styled-components';
 
-export default function BlogTeaser() {
+export default function BlogTeaser({title, author, published, text}) {
+	// const day = Date(published).getDate();
+	// let pub = Date(published);
+	console.log(Date(published));
 	return (
 		<>
 			<Teaser>
-				<Title>Title ...</Title>
-				<Author>von : author</Author>
-				<Published>veröffentlicht am: published</Published>
-				<TeaserText>
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-					tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-					vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-					no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-					amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-					labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-					et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-					sanctus est Lorem ipsum dolor sit amet.
-				</TeaserText>
+				<Title>{title}</Title>
+				<Author>von : {author}</Author>
+				<Published>veröffentlicht am: {Date(published)}</Published>
+				<TeaserText>{text}</TeaserText>
 				<ReadMore>Read More</ReadMore>
 			</Teaser>
 		</>

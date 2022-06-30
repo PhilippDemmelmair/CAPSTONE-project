@@ -2,6 +2,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 import Home from './pages';
 import About from './pages/about';
+import Article from './pages/article';
 import {GlobalStyle} from './styles';
 
 export default function App() {

@@ -33,10 +33,9 @@ const ViewWidget = styled.article`
 
 const NewPost = styled.article`
 	height: 600px;
-    margin 2%;
-    border: 1px solid white;
-    color: white;
-
+	margin: 2%;
+	border: 1px solid white;
+	color: white;
 `;
 
 const Comments = styled.article`

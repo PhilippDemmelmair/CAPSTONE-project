@@ -14,9 +14,9 @@ export default function App() {
 					<Route path="/">
 						<Route index element={<Home />} />
 						<Route path="about/" element={<About />} />
-						<Route path="/article">
-							<Route path=":articleId" element={<Article />} />
-						</Route>
+						{/* <Route path="article/"> */}
+						<Route path=":articleId" element={<Article />} />
+						{/* </Route> */}
 					</Route>
 				</Routes>
 			</BrowserRouter>

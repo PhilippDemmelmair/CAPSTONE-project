@@ -3,11 +3,12 @@ import Blogposts from '../../backend/models/Blogposts';
 
 export default async function handler(request, response) {
 	await connectToMongodb();
-	const {postId} = request.query;
+
+	const {articleId} = request.query;
+	const post = await Blogposts.findById(articleId);
 
 	switch (request.method) {
 		case 'GET': {
-			const post = await Blogposts.findById(postId);
 			return response.status(200).json({data: post});
 		}
 	}

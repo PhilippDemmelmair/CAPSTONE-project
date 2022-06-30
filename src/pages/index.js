@@ -1,4 +1,5 @@
 import {Helmet} from 'react-helmet';
+import styled from 'styled-components';
 
 import BlogTeaser from '../components/blogposts/BlogTeaser';
 import Layout from '../components/Layout';
@@ -6,20 +7,19 @@ import useFetch from '../hooks/useFetch';
 
 export default function HomePage() {
 	const {data, error} = useFetch('api/teaser');
-	if (data) {
-		return (
-			<Layout>
-				<Helmet>
-					<title key="title">My Blog</title>
-					<meta key="description" name="description" content="This is my blog" />
-				</Helmet>
-				{data.data.map(teaser => {
-					// console.log(teaser.title);
-					// console.log(teaser.author);
-					console.log(teaser.published.$timestamp);
+	return (
+		<Layout>
+			<Helmet>
+				<title key="title">My Blog</title>
+				<meta key="description" name="description" content="This is my blog" />
+			</Helmet>
+			{error && <ErrorMessage>Something went wrong, we are onto that!</ErrorMessage>}
+			{data &&
+				data.data.map(teaser => {
 					return (
 						<BlogTeaser
 							key={teaser._id}
+							id={teaser._id}
 							title={teaser.title}
 							author={teaser.author}
 							published={teaser.published.$timestamp}
@@ -27,14 +27,10 @@ export default function HomePage() {
 						/>
 					);
 				})}
-
-				{/* <BlogTeaser />
-				<BlogTeaser />
-				<BlogTeaser />
-				<BlogTeaser /> */}
-			</Layout>
-		);
-	} else if (error) {
-		<h1>Something went wrong, we are onto that!</h1>;
-	}
+		</Layout>
+	);
 }
+
+const ErrorMessage = styled.p`
+	color: tomato;
+`;

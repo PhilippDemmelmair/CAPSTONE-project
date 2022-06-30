@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-export default function BlogTeaser({title, author, published, text}) {
+export default function BlogTeaser({id, title, author, published, text}) {
+	console.log(id);
 	return (
 		<>
 			<Teaser>

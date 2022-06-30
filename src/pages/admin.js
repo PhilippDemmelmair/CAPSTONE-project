@@ -24,13 +24,6 @@ export default function AdminPage() {
 	);
 }
 
-const NavBar = styled.nav`
-	height: 50px;
-	margin: 2%;
-	border: 1px solid white;
-	color: white;
-`;
-
 const ViewWidget = styled.article`
 	height: 200px;
 	margin: 2%;

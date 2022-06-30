@@ -1,8 +1,10 @@
 import {Helmet} from 'react-helmet';
 
 import Layout from '../components/Layout';
+import useFetch from '../hooks/useFetch';
 
 export default function Article() {
+	const {data, error} = useFetch('api/teaser/{id}.js');
 	return (
 		<Layout>
 			<Helmet>

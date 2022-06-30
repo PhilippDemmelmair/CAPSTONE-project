@@ -1,3 +1,4 @@
+import {Link, Outlet} from 'react-router-dom';
 import styled from 'styled-components';
 
 export default function BlogTeaser({id, title, author, published, text}) {
@@ -9,7 +10,9 @@ export default function BlogTeaser({id, title, author, published, text}) {
 				<Author>von : {author}</Author>
 				<Published>veröffentlicht am: {Date(published)}</Published>
 				<TeaserText>{text}</TeaserText>
-				<ReadMore>Read More</ReadMore>
+				<Link to={`/${id}`}>
+					<ReadMore>Read More</ReadMore>
+				</Link>
 			</Teaser>
 		</>
 	);

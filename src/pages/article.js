@@ -1,5 +1,5 @@
 import {Helmet} from 'react-helmet';
-import {Params, useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import styled from 'styled-components';
 
 import Layout from '../components/Layout';

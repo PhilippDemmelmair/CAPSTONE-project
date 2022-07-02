@@ -131,11 +131,10 @@ const CV = styled.a`
 	width: 40%;
 	margin: 0 auto;
 	padding: 5%;
-	color: #f1f1f1;
 	border-radius: 8px;
 	border: 1px solid #000;
-	font-weight: bold;
-
+	color: #f1f1f1;
 	background: green;
+	font-weight: bold;
 	text-align: center;
 `;

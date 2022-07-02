@@ -127,14 +127,14 @@ const List = styled.ul`
 const Item = styled.li``;
 
 const CV = styled.a`
-	width: 40%;
 	display: block;
-	color: #f1f1f1;
+	width: 40%;
 	margin: 0 auto;
 	padding: 5%;
+	color: #f1f1f1;
 	font-weight: bold;
-	text-align: center;
-	border: 1px solid #000;
 	border-radius: 8px;
 	background: green;
+	text-align: center;
+	border: 1px solid #000;
 `;

@@ -79,18 +79,18 @@ export default function AboutPage() {
 const Card = styled.article`
 	margin: 2%;
 	padding: 2%;
-	border-radius: 8px;
 	border: 1px solid #1f1f1f;
+	border-radius: 8px;
 `;
 
 const Title = styled.h1`
-	text-align: center;
 	color: #f1f1f1;
+	text-align: center;
 `;
 
 const Job = styled.h2`
-	text-align: center;
 	color: #f1f1f1;
+	text-align: center;
 `;
 
 const Highlight = styled.h2`
@@ -99,8 +99,8 @@ const Highlight = styled.h2`
 `;
 
 const Text = styled.p`
-	text-align: justify;
 	color: #f1f1f1;
+	text-align: justify;
 `;
 const InnerTitle = styled.h3`
 	color: #f1f1f1;
@@ -115,26 +115,26 @@ const Data = styled.p`
 `;
 
 const Position = styled.p`
-	text-align: justify;
 	color: #f1f1f1;
+	text-align: justify;
 `;
 
 const List = styled.ul`
-	text-align: center;
 	color: #f1f1f1;
+	text-align: center;
 `;
 
 const Item = styled.li``;
 
 const CV = styled.a`
 	width: 40%;
-	color: #f1f1f1;
 	display: block;
-	text-align: center;
-	font-weight: bold;
+	color: #f1f1f1;
 	margin: 0 auto;
 	padding: 5%;
-	background: green;
-	border-radius: 8px;
+	font-weight: bold;
+	text-align: center;
 	border: 1px solid #000;
+	border-radius: 8px;
+	background: green;
 `;

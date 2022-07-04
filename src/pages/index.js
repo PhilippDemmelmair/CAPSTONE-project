@@ -1,11 +1,13 @@
 import {useState} from 'react';
 import {Helmet} from 'react-helmet';
+import styled from 'styled-components';
 
 import BlogTeaser from '../components/blogposts/BlogTeaser';
 import Layout from '../components/Layout';
 import useFetch from '../hooks/useFetch';
 
 export default function HomePage() {
+
 	const {data, error, loading} = useFetch('api/teaser');
 	return (
 		<Layout>
@@ -13,11 +15,24 @@ export default function HomePage() {
 				<title key="title">My Blog</title>
 				<meta key="description" name="description" content="This is my blog" />
 			</Helmet>
-			<BlogTeaser />
-			<BlogTeaser />
-			<BlogTeaser />
-			<BlogTeaser />
-			<BlogTeaser />
+			{error && <ErrorMessage>Something went wrong, we are onto that!</ErrorMessage>}
+			{data &&
+				data.data.map(teaser => {
+					return (
+						<BlogTeaser
+							key={teaser._id}
+							id={teaser._id}
+							title={teaser.title}
+							author={teaser.author}
+							published={teaser.published.$timestamp}
+							text={teaser.text}
+						/>
+					);
+				})}
 		</Layout>
 	);
 }
+
+const ErrorMessage = styled.p`
+	color: tomato;
+`;

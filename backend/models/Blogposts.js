@@ -6,6 +6,7 @@ const schema = new Schema(
 	{
 		title: String,
 		author: String,
+		published: {type: Date},
 		views: [],
 		text: String,
 	},

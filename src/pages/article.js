@@ -22,7 +22,7 @@ function showPost(data) {
 
 export default function Article() {
 	const id = useParams();
-	const {data, error} = useFetch(`api/teaser/${id.articleId}`);
+	const [post, error] = useFetch(`api/teaser/${id.articleId}`);
 	return (
 		<Layout>
 			<Helmet>
@@ -30,7 +30,7 @@ export default function Article() {
 				<meta key="description" name="description" content="This is an article about... " />
 			</Helmet>
 			{error && <ErrorMessage>Something went wrong, we are onto that!</ErrorMessage>}
-			{data && showPost(data.data)}
+			{post && showPost(post.data)}
 
 			{/*  */}
 		</Layout>

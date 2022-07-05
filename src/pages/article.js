@@ -12,9 +12,9 @@ function showPost(data) {
 			<Title>{data.title}</Title>
 			<Author>von : {data.author}</Author>
 			<Published>
-				veröffentlicht am: {dateFromID(data._id).toLocaleDateString()} um:{' '}
+				veröffentlicht am: {dateFromID(data._id).toLocaleDateString()} um:
 				{dateFromID(data._id).toLocaleTimeString()}
-			</Published>{' '}
+			</Published>
 			<Text>{data.text}</Text>
 		</>
 	);

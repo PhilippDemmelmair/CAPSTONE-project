@@ -26,6 +26,5 @@ export function pxToRem(pixel, rootFontSize = 16) {
 
 export function dateFromID(id) {
 	const time = new mongoose.Types.ObjectId(id).getTimestamp();
-	// return time.toLocaleDateString() + ' : ' + time.toLocaleTimeString();
 	return time;
 }

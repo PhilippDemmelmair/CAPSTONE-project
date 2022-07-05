@@ -1,13 +1,18 @@
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
-export default function BlogTeaser({id, title, author, published, text}) {
+import {dateFromID} from '../../utils/unit';
+
+export default function BlogTeaser({id, title, author, text}) {
 	return (
 		<>
 			<Teaser>
 				<Title>{title}</Title>
 				<Author>von : {author}</Author>
-				<Published>veröffentlicht am: {Date(published)}</Published>
+				<Published>
+					veröffentlicht am: {dateFromID(id).toLocaleDateString()} um:{' '}
+					{dateFromID(id).toLocaleTimeString()}
+				</Published>
 				<TeaserText>{text}</TeaserText>
 				<Link to={`${id}`}>
 					<ReadMore>Read More</ReadMore>

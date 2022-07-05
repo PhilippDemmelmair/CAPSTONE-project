@@ -4,13 +4,17 @@ import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 import useFetch from '../hooks/useFetch';
+import {dateFromID} from '../utils/unit';
 
 function showPost(data) {
 	return (
 		<>
 			<Title>{data.title}</Title>
 			<Author>von : {data.author}</Author>
-			<Published>veröffentlicht am: {Date(data.published)}</Published>
+			<Published>
+				veröffentlicht am: {dateFromID(data._id).toLocaleDateString()} um:{' '}
+				{dateFromID(data._id).toLocaleTimeString()}
+			</Published>{' '}
 			<Text>{data.text}</Text>
 		</>
 	);

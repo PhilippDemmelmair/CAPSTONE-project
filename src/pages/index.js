@@ -7,7 +7,6 @@ import Layout from '../components/Layout';
 import useFetch from '../hooks/useFetch';
 
 export default function HomePage() {
-
 	const {data, error, loading} = useFetch('api/teaser');
 	return (
 		<Layout>
@@ -24,7 +23,6 @@ export default function HomePage() {
 							id={teaser._id}
 							title={teaser.title}
 							author={teaser.author}
-							published={teaser.published.$timestamp}
 							text={teaser.text}
 						/>
 					);

@@ -52,47 +52,47 @@ const DropDown = styled.article`
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-between;
-	border: 1px solid white;
 	border-radius: 8px;
-	width: 60vw;
+	border: 1px solid white;
+	width: 60%;
 	margin: 0px auto;
 `;
 
 const Down = styled.p`
 	color: white;
-	font-size: 1rem;
-	margin: auto 0;
 	width: 100%;
+	margin: auto 0;
+	font-size: 1rem;
 	text-align: center;
 `;
 
 const Menu = styled.p`
 	color: white;
-	font-size: 2rem;
 	margin: auto 0;
+	font-size: 2rem;
 	padding: 0 2vw;
 	border-right: 1px solid white;
 `;
 const Container = styled.section`
-	border-top: 1px solid white;
 	display: flex;
+	border-top: 1px solid white;
 	flex-flow: column wrap;
 	align-items: center;
 	justify-content: inherit;
 `;
 
 const MenuWrapper = styled.section`
-	width: 100%;
 	display: flex;
+	width: 100%;
 	flex-flow: row nowrap;
 `;
 
 const NavElement = styled.section`
 	width: 90%;
-	border: 1px solid white;
-	border-radius: 8px;
 	margin: 2% auto;
 	padding: 2%;
+	border: 1px solid white;
+	border-radius: 8px;
 	color: white;
 	text-align: center;
 `;

@@ -49,19 +49,19 @@ const Home = styled.div`
 `;
 
 const DropDown = styled.article`
+	margin: 0 auto;
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-between;
 	width: 60vw;
 	border: 1px solid white;
 	border-radius: 8px;
-	margin: 0 auto;
 `;
 
 const Down = styled.p`
+	margin: auto 0;
 	width: 100%;
 	color: white;
-	margin: auto 0;
 	font-size: 1rem;
 	text-align: center;
 `;
@@ -70,8 +70,8 @@ const Menu = styled.p`
 	margin: auto 0;
 	padding: 0 2vw;
 	color: white;
-	font-size: 2rem;
 	border-right: 1px solid white;
+	font-size: 2rem;
 `;
 const Container = styled.section`
 	display: flex;

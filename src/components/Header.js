@@ -52,8 +52,8 @@ const DropDown = styled.article`
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-between;
-	margin: 0 auto;
 	width: 60vw;
+	margin: 0 auto;
 	border: 1px solid white;
 	border-radius: 8px;
 `;

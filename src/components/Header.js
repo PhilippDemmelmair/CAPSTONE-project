@@ -33,21 +33,6 @@ export default function Header() {
 							<NavElement>
 								<Link to="/about">About me</Link>
 							</NavElement>
-							<NavElement>
-								<div>Placeholder #1</div>
-							</NavElement>
-							<NavElement>
-								<div>Placeholder #2</div>
-							</NavElement>
-							<NavElement>
-								<div>Placeholder #3</div>
-							</NavElement>
-							<NavElement>
-								<div>Placeholder #4</div>
-							</NavElement>
-							<NavElement>
-								<div>Placeholder #5</div>
-							</NavElement>
 						</Container>
 					)}
 				</DropDown>

@@ -52,39 +52,39 @@ const DropDown = styled.article`
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-between;
-	border-radius: 8px;
+	width: 60vw;
 	border: 1px solid white;
-	width: 60%;
-	margin: 0px auto;
+	border-radius: 8px;
+	margin: 0 auto;
 `;
 
 const Down = styled.p`
-	color: white;
 	width: 100%;
+	color: white;
 	margin: auto 0;
 	font-size: 1rem;
 	text-align: center;
 `;
 
 const Menu = styled.p`
-	color: white;
 	margin: auto 0;
-	font-size: 2rem;
 	padding: 0 2vw;
+	color: white;
+	font-size: 2rem;
 	border-right: 1px solid white;
 `;
 const Container = styled.section`
 	display: flex;
-	border-top: 1px solid white;
 	flex-flow: column wrap;
 	align-items: center;
 	justify-content: inherit;
+	border-top: 1px solid white;
 `;
 
 const MenuWrapper = styled.section`
 	display: flex;
-	width: 100%;
 	flex-flow: row nowrap;
+	width: 100%;
 `;
 
 const NavElement = styled.section`

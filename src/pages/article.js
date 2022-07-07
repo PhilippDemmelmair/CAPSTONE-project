@@ -10,7 +10,7 @@ function showPost(data) {
 		<>
 			<Title>{data.title}</Title>
 			<Author>von : {data.author}</Author>
-			<Published>veröffentlicht am: {Date(data.published)}</Published>
+			<Published>veröffentlicht am: </Published>
 			<Text>{data.text}</Text>
 		</>
 	);

@@ -1,9 +1,24 @@
+import {useState} from 'react';
 import {Helmet} from 'react-helmet';
 import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 
 export default function AdminPage() {
+	const [post, setPost] = useState({title: '', author: 'Philipp Demmelmair', text: ''});
+
+	async function addPost(post) {
+		await fetch('api/teaser', {
+			method: 'POST',
+			body: JSON.stringify(post),
+		}).then(response => {
+			if (!response.ok) {
+				return response.statusText;
+			} else {
+				return response.message;
+			}
+		});
+	}
 	return (
 		<Layout>
 			<Helmet>
@@ -14,7 +29,30 @@ export default function AdminPage() {
 				Views <br></br>Here will be displayed, how much views the blog got;
 			</ViewWidget>
 			<NewPost>
-				New Post<br></br>Here will be a form to create new posts;
+				<BlogPostEntry
+					onSubmit={event => {
+						event.preventDefault();
+						addPost(post);
+						setPost({...post, title: '', text: ''});
+					}}
+				>
+					<TitleLabel htmlFor="input-title">Title:</TitleLabel>
+					<TitleInput
+						id="input-title"
+						type="text"
+						value={post.title}
+						onChange={event => setPost({...post, title: event.target.value})}
+					/>
+					<PostLabel htmlFor="input-text">Text:</PostLabel>
+					<PostInput
+						id="input-text"
+						type="textarea"
+						rows={27}
+						value={post.text}
+						onChange={event => setPost({...post, text: event.target.value})}
+					/>
+					<SaveButton>Save</SaveButton>
+				</BlogPostEntry>
 			</NewPost>
 			<Comments>
 				Comments<br></br>Here will be the section, where you can approve or dissmiss a
@@ -43,4 +81,48 @@ const Comments = styled.article`
 	margin: 2%;
 	border: 1px solid white;
 	color: white;
+`;
+
+const BlogPostEntry = styled.form``;
+
+const TitleLabel = styled.label`
+	margin: 2% auto;
+	padding: 1%;
+	border-radius: 8px;
+	background: #0496ff;
+	font-size: 1.3rem;
+	text-align: center;
+	display: block;
+	width: 40%;
+`;
+
+const TitleInput = styled.input`
+	margin: 1% 1%;
+	width: 98%;
+`;
+
+const PostLabel = styled.label`
+	margin: 2% auto;
+	padding: 1%;
+	border-radius: 8px;
+	background: #0496ff;
+	font-size: 1.3rem;
+	text-align: center;
+	display: block;
+	width: 40%;
+`;
+
+const PostInput = styled.textarea`
+	margin: 1% 1%;
+	width: 98%;
+`;
+
+const SaveButton = styled.p`
+	margin: 2% auto;
+	padding: 2%;
+	background: #006ba6;
+	font-size: 1.3rem;
+	width: 90%;
+	border-radius: 8px;
+	text-align: center;
 `;

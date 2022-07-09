@@ -22,7 +22,6 @@ export default function HomePage() {
 							id={teaser._id}
 							title={teaser.title}
 							author={teaser.author}
-							published={teaser.published.$timestamp}
 							text={teaser.text}
 						/>
 					);

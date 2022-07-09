@@ -94,13 +94,13 @@ const Comments = styled.article`
 const BlogPostEntry = styled.form``;
 
 const TitleLabel = styled.label`
+	display: block;
+	width: 40%;
 	margin: 2% auto;
 	padding: 1%;
 	border-radius: 8px;
 	background: #0496ff;
-	display: block;
 	font-size: 1.3rem;
-	width: 40%;
 	text-align: center;
 `;
 
@@ -111,12 +111,12 @@ const TitleInput = styled.input`
 
 const PostLabel = styled.label`
 	display: block;
+	width: 40%;
 	margin: 2% auto;
 	padding: 1%;
 	border-radius: 8px;
 	background: #0496ff;
 	font-size: 1.3rem;
-	width: 40%;
 	text-align: center;
 `;
 
@@ -130,10 +130,10 @@ const SaveButton = styled.button`
 	width: 90%;
 	margin: 2% auto;
 	padding: 2%;
-	background: #006ba6;
-	font-size: 1.3rem;
 	border: none;
 	border-radius: 8px;
+	background: #006ba6;
+	font-size: 1.3rem;
 	color: white;
 	text-align: center;
 `;

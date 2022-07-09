@@ -99,14 +99,14 @@ const TitleLabel = styled.label`
 	border-radius: 8px;
 	background: #0496ff;
 	font-size: 1.3rem;
-	text-align: center;
 	display: block;
+	text-align: center;
 	width: 40%;
 `;
 
 const TitleInput = styled.input`
-	margin: 1% 1%;
 	width: 98%;
+	margin: 1% 1%;
 `;
 
 const PostLabel = styled.label`
@@ -115,25 +115,25 @@ const PostLabel = styled.label`
 	border-radius: 8px;
 	background: #0496ff;
 	font-size: 1.3rem;
-	text-align: center;
 	display: block;
+	text-align: center;
 	width: 40%;
 `;
 
 const PostInput = styled.textarea`
-	margin: 1% 1%;
 	width: 98%;
+	margin: 1% 1%;
 `;
 
 const SaveButton = styled.button`
 	display: block;
+	width: 90%;
 	margin: 2% auto;
 	padding: 2%;
 	background: #006ba6;
 	font-size: 1.3rem;
-	width: 90%;
-	border-radius: 8px;
 	border: none;
+	border-radius: 8px;
 	color: white;
 	text-align: center;
 `;

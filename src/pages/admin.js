@@ -133,7 +133,7 @@ const SaveButton = styled.button`
 	border: none;
 	border-radius: 8px;
 	background: #006ba6;
-	font-size: 1.3rem;
 	color: white;
+	font-size: 1.3rem;
 	text-align: center;
 `;

@@ -98,10 +98,10 @@ const TitleLabel = styled.label`
 	padding: 1%;
 	border-radius: 8px;
 	background: #0496ff;
-	font-size: 1.3rem;
 	display: block;
-	text-align: center;
+	font-size: 1.3rem;
 	width: 40%;
+	text-align: center;
 `;
 
 const TitleInput = styled.input`
@@ -110,14 +110,14 @@ const TitleInput = styled.input`
 `;
 
 const PostLabel = styled.label`
+	display: block;
 	margin: 2% auto;
 	padding: 1%;
 	border-radius: 8px;
 	background: #0496ff;
 	font-size: 1.3rem;
-	display: block;
-	text-align: center;
 	width: 40%;
+	text-align: center;
 `;
 
 const PostInput = styled.textarea`

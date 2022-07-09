@@ -32,8 +32,16 @@ export default function AdminPage() {
 				<BlogPostEntry
 					onSubmit={event => {
 						event.preventDefault();
-						addPost(post);
-						setPost({...post, title: '', text: ''});
+						if (post.title.length > 3) {
+							if (post.text.length > 100) {
+								addPost(post);
+								setPost({...post, title: '', text: ''});
+							} else {
+								alert('Der Text des Posts muss mindestens 100 Zeichen lang sein.');
+							}
+						} else {
+							alert('Der Titiel muss mindestens zehn Zeichen lang sein.');
+						}
 					}}
 				>
 					<TitleLabel htmlFor="input-title">Title:</TitleLabel>
@@ -117,12 +125,15 @@ const PostInput = styled.textarea`
 	width: 98%;
 `;
 
-const SaveButton = styled.p`
+const SaveButton = styled.button`
+	display: block;
 	margin: 2% auto;
 	padding: 2%;
 	background: #006ba6;
 	font-size: 1.3rem;
 	width: 90%;
 	border-radius: 8px;
+	border: none;
+	color: white;
 	text-align: center;
 `;

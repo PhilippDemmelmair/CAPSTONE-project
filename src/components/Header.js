@@ -1,39 +1,40 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 import headerImg from './header.png';
 
 export default function Header() {
-	const [menu, setMenu] = useState(false);
-	function toggleMenu() {
-		setMenu(!menu);
-		console.log(menu);
+	const [isMenuOpen, setisMenuOpen] = useState(false);
+	function toggleisMenuOpen() {
+		setisMenuOpen(!isMenuOpen);
 	}
 
 	return (
 		<header>
 			<Navigation>
-				<Home>
-					<Link to="/">
-						<HeaderImage src={headerImg}></HeaderImage>
-					</Link>
-				</Home>
+				<Link to="/">
+					<Logo src={headerImg}></Logo>
+				</Link>
 				<DropDown>
 					<MenuWrapper>
 						<Menu>Navigation</Menu>
-						<Down onClick={toggleMenu}>Down</Down>
+						<Down onClick={toggleisMenuOpen}>Down</Down>
 					</MenuWrapper>
 
-					{menu && (
-						<Container>
+					{isMenuOpen && (
+						<>
 							<NavElement>
-								<Link to="/">Home</Link>
+								<Link to="/" style={{textDecoration: 'none', color: 'white'}}>
+									Home
+								</Link>
 							</NavElement>
 							<NavElement>
-								<Link to="/about">About me</Link>
+								<Link to="/about" style={{textDecoration: 'none', color: 'white'}}>
+									About me
+								</Link>
 							</NavElement>
-						</Container>
+						</>
 					)}
 				</DropDown>
 			</Navigation>
@@ -43,14 +44,9 @@ export default function Header() {
 
 const Navigation = styled.nav``;
 
-const Home = styled.div`
-	margin: 2%;
-	padding: 2%;
-`;
-
 const DropDown = styled.article`
 	display: flex;
-	flex-flow: column wrap;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	width: 60vw;
 	margin: 0 auto;
@@ -73,13 +69,6 @@ const Menu = styled.p`
 	color: white;
 	font-size: 2rem;
 `;
-const Container = styled.section`
-	display: flex;
-	flex-flow: column wrap;
-	align-items: center;
-	justify-content: inherit;
-	border-top: 1px solid white;
-`;
 
 const MenuWrapper = styled.section`
 	display: flex;
@@ -97,6 +86,6 @@ const NavElement = styled.section`
 	text-align: center;
 `;
 
-const HeaderImage = styled.img`
+const Logo = styled.img`
 	width: 100%;
 `;

@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import {Helmet} from 'react-helmet';
 import styled from 'styled-components';
 
@@ -7,8 +6,7 @@ import Layout from '../components/Layout';
 import useFetch from '../hooks/useFetch';
 
 export default function HomePage() {
-
-	const {data, error, loading} = useFetch('api/teaser');
+	const {data, error} = useFetch('api/teaser');
 	return (
 		<Layout>
 			<Helmet>

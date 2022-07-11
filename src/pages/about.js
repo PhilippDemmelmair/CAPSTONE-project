@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 export default function AboutPage() {
 	const saveCV = () => {
 		FileSaver.saveAs(
-			process.env.REACT_APP_CLIENT_URL + '/files/cv.pdf',
+			process.env.REACT_APP_CLIENT_URL + '/files/PhilippDemmelmairCV.pdf',
 			'PhilippDemmelmairCV.pdf'
 		);
 	};

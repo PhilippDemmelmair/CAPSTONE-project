@@ -70,7 +70,7 @@ export default function AboutPage() {
 						changes, fixing bugs and everything IT related in the company.
 					</Position>
 				</Text>
-				<CV onClick={saveCV}>Get my CV</CV>
+				{/* <CV onClick={saveCV}>Get my CV</CV> */}
 			</Card>
 		</Layout>
 	);

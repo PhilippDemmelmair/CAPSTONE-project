@@ -13,7 +13,7 @@ export default async function handler(request, response) {
 		await newPost.save();
 		return response
 			.status(200)
-			.json({message: 'Blogpost ${result.insertedID} got saved to the db.'});
+			.json({message: `Blogpost ${result.insertedID} got saved to the db.`});
 	}
 	return response.status(403).json({message: 'Error: request method not allowed.'});
 }

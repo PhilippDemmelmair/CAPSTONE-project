@@ -32,22 +32,20 @@ export default function AdminPage() {
 				<BlogPostEntry
 					onSubmit={event => {
 						event.preventDefault();
-						if (post.title.length > 3) {
-							if (post.text.length > 100) {
-								addPost(post);
-								setPost({...post, title: '', text: ''});
-							} else {
-								alert('Der Text des Posts muss mindestens 100 Zeichen lang sein.');
-							}
+						if (post.title.length >= 10 && post.text.length >= 100) {
+							addPost(post);
+							setPost({...post, title: '', text: ''});
 						} else {
-							alert('Der Titiel muss mindestens zehn Zeichen lang sein.');
+							alert(
+								'Der Titiel muss mindestens zehn Zeichen und der Text mindestens 100 Zeichen lang sein.'
+							);
 						}
 					}}
 				>
 					<TitleLabel htmlFor="input-title">Title:</TitleLabel>
 					<TitleInput
-					required
-					minlength="10"
+						required
+						minlength="10"
 						id="input-title"
 						type="text"
 						value={post.title}
@@ -55,6 +53,8 @@ export default function AdminPage() {
 					/>
 					<PostLabel htmlFor="input-text">Text:</PostLabel>
 					<PostInput
+						required
+						minlength="100"
 						id="input-text"
 						type="textarea"
 						rows={27}

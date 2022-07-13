@@ -46,6 +46,8 @@ export default function AdminPage() {
 				>
 					<TitleLabel htmlFor="input-title">Title:</TitleLabel>
 					<TitleInput
+					required
+					minlength="10"
 						id="input-title"
 						type="text"
 						value={post.title}

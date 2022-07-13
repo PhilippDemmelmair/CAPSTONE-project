@@ -37,7 +37,7 @@ export default function AdminPage() {
 							setPost({...post, title: '', text: ''});
 						} else {
 							alert(
-								'Der Titiel muss mindestens zehn Zeichen und der Text mindestens 100 Zeichen lang sein.'
+								'Der Titel muss mindestens zehn Zeichen und der Text mindestens 100 Zeichen lang sein.'
 							);
 						}
 					}}

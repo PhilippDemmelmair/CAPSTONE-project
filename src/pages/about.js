@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 export default function AboutPage() {
 	const saveCV = () => {
 		FileSaver.saveAs(
-			process.env.REACT_APP_CLIENT_URL + '/resources/cv.pdf',
+			process.env.REACT_APP_CLIENT_URL + '/files/PhilippDemmelmairCV.pdf',
 			'PhilippDemmelmairCV.pdf'
 		);
 	};
@@ -70,7 +70,7 @@ export default function AboutPage() {
 						changes, fixing bugs and everything IT related in the company.
 					</Position>
 				</Text>
-				<CV onClick={saveCV}>Get my CV</CV>
+				{/* <CV onClick={saveCV}>Get my CV</CV> */}
 			</Card>
 		</Layout>
 	);

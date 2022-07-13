@@ -4,13 +4,17 @@ import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 import useFetch from '../hooks/useFetch';
+import {dateFromID} from '../utils/unit';
 
 function showPost(data) {
 	return (
 		<>
 			<Title>{data.title}</Title>
 			<Author>von : {data.author}</Author>
-			<Published>veröffentlicht am: </Published>
+			<Published>
+				veröffentlicht am: {dateFromID(data._id).toLocaleDateString()} um:{' '}
+				{dateFromID(data._id).toLocaleTimeString()}
+			</Published>
 			<Text>{data.text}</Text>
 		</>
 	);
@@ -18,7 +22,7 @@ function showPost(data) {
 
 export default function Article() {
 	const id = useParams();
-	const {data, error} = useFetch(`api/teaser/${id.articleId}`);
+	const [post, error] = useFetch(`api/teaser/${id.articleId}`);
 	return (
 		<Layout>
 			<Helmet>
@@ -26,7 +30,7 @@ export default function Article() {
 				<meta key="description" name="description" content="This is an article about... " />
 			</Helmet>
 			{error && <ErrorMessage>Something went wrong, we are onto that!</ErrorMessage>}
-			{data && showPost(data.data)}
+			{post && showPost(post.data)}
 
 			{/*  */}
 		</Layout>

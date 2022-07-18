@@ -1,3 +1,5 @@
+import mongoose from 'mongoose';
+
 /**
  * Appends the rem unit suffix to a number
  * @param {number} n
@@ -20,4 +22,9 @@ export function rem(n) {
  */
 export function pxToRem(pixel, rootFontSize = 16) {
 	return rem(pixel / rootFontSize);
+}
+
+export function dateFromID(id) {
+	const time = new mongoose.Types.ObjectId(id).getTimestamp();
+	return time;
 }
